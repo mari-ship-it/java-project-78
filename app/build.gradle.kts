@@ -1,6 +1,8 @@
 plugins {
     id("java")
     checkstyle
+    id ("org.sonarqube") version "6.2.0.5505"
+
 }
 
 group = "hexlet.code"
@@ -17,4 +19,12 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "mari-ship-it_java-project-78")
+        property("sonar.organization", "mari-ship-it")
+        property("sonar.host.url", "https://sonarcloud.io")
+    }
 }
