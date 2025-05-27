@@ -1,0 +1,14 @@
+/.idea/
+
+.gradle
+
+build
+
+**/logs/
+
+.settings
+bin
+.project*
+.classpath
+.factorypath
+kls_database.db
