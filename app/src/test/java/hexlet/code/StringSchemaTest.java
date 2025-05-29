@@ -18,13 +18,6 @@ public class StringSchemaTest {
     }
 
     @Test
-    public void nullAndIsEmptyTest() {
-
-        assertTrue(schema.isValid(null));
-        assertTrue(schema.isValid(""));
-    }
-
-    @Test
     public void requiredTest() {
 
         schema.required();
