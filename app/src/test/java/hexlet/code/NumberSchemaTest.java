@@ -1,7 +1,6 @@
 package hexlet.code;
 
 import hexlet.code.schemas.NumberSchema;
-import hexlet.code.schemas.StringSchema;
 import org.junit.jupiter.api.BeforeEach;
 
 public class NumberSchemaTest {
