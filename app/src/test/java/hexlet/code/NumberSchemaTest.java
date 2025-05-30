@@ -12,7 +12,7 @@ class NumberSchemaTest {
     NumberSchema schema;
 
     @BeforeEach
-    public void beforeEach() {
+    void beforeEach() {
         Validator validator = new Validator();
         schema = validator.number();
     }
