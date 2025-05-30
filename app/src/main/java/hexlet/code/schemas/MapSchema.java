@@ -18,10 +18,10 @@ public class MapSchema extends BaseSchema<Map<?, ?>> {
     @SuppressWarnings("unchecked")
     public <T> MapSchema shape(Map<String, BaseSchema<T>> schemas) {
 
-        addValidation("shape", map -> {
-            return schemas.entrySet().stream().allMatch(entry ->
-                    entry.getValue().isValid((T) map.get(entry.getKey())));
-        });
+        addValidation("shape", map ->
+            schemas.entrySet().stream().allMatch(entry ->
+                    entry.getValue().isValid((T) map.get(entry.getKey())))
+        );
         return this;
     }
 }
