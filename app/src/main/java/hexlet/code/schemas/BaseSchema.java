@@ -8,11 +8,11 @@ public class BaseSchema<T> {
 
     private final Map<String, Predicate<T>> validations = new HashMap<>();
 
-    protected void addValidation(String name, Predicate<T> validation) {
+    void addValidation(String name, Predicate<T> validation) {
         validations.put(name, validation);
     }
 
-    public boolean isValid(T obj) {
+    public final boolean isValid(T obj) {
 
         if (validations.containsKey("required") && obj == null) {
             return false;

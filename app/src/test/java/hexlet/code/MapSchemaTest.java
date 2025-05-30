@@ -13,8 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MapSchemaTest {
 
-    Validator validator;
-    MapSchema schema;
+    private Validator validator;
+    private MapSchema schema;
 
     @BeforeEach
     void beforeEach() {
