@@ -8,7 +8,7 @@ public class BaseSchema<T> {
 
     private final Map<String, Predicate<T>> validations = new HashMap<>();
 
-    void addValidation(String name, Predicate<T> validation) {
+    final void addValidation(String name, Predicate<T> validation) {
         validations.put(name, validation);
     }
 
