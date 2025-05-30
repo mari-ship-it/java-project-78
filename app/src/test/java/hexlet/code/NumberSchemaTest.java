@@ -42,7 +42,7 @@ class NumberSchemaTest {
     @Test
     void rangeTest() {
 
-        schema.renge(5, 10);
+        schema.range(5, 10);
 
         assertTrue(schema.isValid(null));
         assertTrue(schema.isValid(5));
@@ -54,7 +54,7 @@ class NumberSchemaTest {
     @Test
     void setOfChecksTest() {
 
-        schema.required().positive().renge(-1, 8);
+        schema.required().positive().range(-1, 8);
 
         assertTrue(schema.isValid(1));
         assertTrue(schema.isValid(8));

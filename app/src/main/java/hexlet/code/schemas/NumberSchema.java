@@ -14,8 +14,8 @@ public class NumberSchema extends BaseSchema<Integer> {
         return this;
     }
 
-    public NumberSchema renge(int min, int max) {
-        addValidation("renge", obj -> obj >= min && obj <= max);
+    public NumberSchema range(int min, int max) {
+        addValidation("range", obj -> obj >= min && obj <= max);
         return this;
     }
 }
