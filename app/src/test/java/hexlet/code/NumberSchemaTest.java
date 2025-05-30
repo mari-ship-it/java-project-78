@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NumberSchemaTest {
+class NumberSchemaTest {
 
     NumberSchema schema;
 
@@ -18,7 +18,7 @@ public class NumberSchemaTest {
     }
 
     @Test
-    public void requiredTest() {
+    void requiredTest() {
 
         schema.required();
 
@@ -29,7 +29,7 @@ public class NumberSchemaTest {
     }
 
     @Test
-    public void positiveTest() {
+    void positiveTest() {
 
         schema.positive();
 
@@ -40,7 +40,7 @@ public class NumberSchemaTest {
     }
 
     @Test
-    public void rangeTest() {
+    void rangeTest() {
 
         schema.renge(5, 10);
 
@@ -52,7 +52,7 @@ public class NumberSchemaTest {
     }
 
     @Test
-    public void setOfChecksTest() {
+    void setOfChecksTest() {
 
         schema.required().positive().renge(-1, 8);
 

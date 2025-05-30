@@ -7,18 +7,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StringSchemaTest {
+class StringSchemaTest {
 
     StringSchema schema;
 
     @BeforeEach
-    public void beforeEach() {
+    void beforeEach() {
         Validator validator = new Validator();
         schema = validator.string();
     }
 
     @Test
-    public void requiredTest() {
+    void requiredTest() {
 
         schema.required();
 
@@ -29,7 +29,7 @@ public class StringSchemaTest {
     }
 
     @Test
-    public void minLengthTest() {
+    void minLengthTest() {
 
         schema.minLength(10).minLength(4);
 
@@ -39,7 +39,7 @@ public class StringSchemaTest {
     }
 
     @Test
-    public void containsTest() {
+    void containsTest() {
 
         schema.contains("wh");
         assertTrue(schema.isValid(null));
@@ -51,7 +51,7 @@ public class StringSchemaTest {
     }
 
     @Test
-    public void setOfChecksTest() {
+    void setOfChecksTest() {
 
         schema.required().minLength(5).contains("hex");
 

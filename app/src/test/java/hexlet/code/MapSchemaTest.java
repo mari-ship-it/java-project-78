@@ -9,18 +9,18 @@ import java.util.HashMap;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class MapSchemaTest {
+class MapSchemaTest {
 
     MapSchema schema;
 
     @BeforeEach
-    public void beforeEach() {
+    void beforeEach() {
         Validator validator = new Validator();
         schema = validator.map();
     }
 
     @Test
-    public void requiredTest() {
+    void requiredTest() {
 
         schema.required();
 
@@ -33,7 +33,7 @@ public class MapSchemaTest {
     }
 
     @Test
-    public void sizeofTest() {
+    void sizeofTest() {
 
         schema.sizeof(2);
 
@@ -50,7 +50,7 @@ public class MapSchemaTest {
     }
 
     @Test
-    public void setOfChecksTest() {
+    void setOfChecksTest() {
 
         schema.required().sizeof(1);
 
