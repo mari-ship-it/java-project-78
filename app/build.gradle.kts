@@ -13,8 +13,10 @@ repositories {
     mavenCentral()
 }
 
+val junitVersion = "5.9.2"
+
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
