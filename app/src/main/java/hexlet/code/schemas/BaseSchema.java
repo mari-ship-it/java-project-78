@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 
 public class BaseSchema<T> {
 
-    private Map<String, Predicate<T>> validations = new HashMap<>();
+    private final Map<String, Predicate<T>> validations = new HashMap<>();
 
     protected void addValidation(String name, Predicate<T> validation) {
         validations.put(name, validation);
@@ -20,7 +20,6 @@ public class BaseSchema<T> {
         if (obj == null) {
             return true;
         }
-
         return validations.values().stream().allMatch(entry -> entry.test(obj));
     }
 }
