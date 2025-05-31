@@ -10,13 +10,13 @@ public final class StringSchema extends BaseSchema<String> {
 
     public StringSchema minLength(int size) {
 
-        addValidation("minLength", str -> str == null || str.isEmpty() || str.length() >= size);
+        addValidation("minLength", str -> str.length() >= size || str.isEmpty());
         return this;
     }
 
     public StringSchema contains(String substring) {
 
-        addValidation("contains", str -> str.contains(substring) || str.isEmpty() || str == null);
+        addValidation("contains", str -> str.contains(substring) || str.isEmpty());
         return this;
     }
 }
